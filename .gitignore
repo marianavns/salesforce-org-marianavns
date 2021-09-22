@@ -57,4 +57,5 @@ READMESF.md
 config
 jest.config.js
 sfdx-project.json
+.vscode/
 
