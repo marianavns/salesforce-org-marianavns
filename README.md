@@ -1,20 +1,90 @@
 # Primeiros passos com Apex
 
-## Hello World no VSCode
+## Sumário
 
-Bem, "rodar" Apex no VSCode exige que o ambiente seja preparado. Chamamos esse ambiente de SFDX, ou *Salesforce Developer Experience*.
+- [Hello World! No Developer Console ou no VSCode?](#Hello-World-No-Developer-Console-ou-no-VSCode)
+  - [Hello World no Developer Console](#Hello-World-no-Developer-Console)
+  - [Hello World no VSCode](#Hello-World-no-VSCode)
+- [Developer Console](#Developer-Console)
+  - [Criando Registros no Developer Console](#Criando-Registros-No-Developer-Console)
+- [Elementos de uma Aplicação Salesforce](#Elementos-de-uma-Aplicação-Salesforce)
+  - [Triggers (Acionadores)](#Triggers-Acionadores)
+    - [Estrutura da Trigger](#Estrutura-da-Trigger)
+- 
 
-Vale a pena fazer o projeto https://trailhead.salesforce.com/pt-BR/content/learn/projects/quick-start-salesforce-dx, mas aqui temos um passo-a-passo resumido:
+## Hello World! No Developer Console ou no VSCode?
+
+O Developer Console é um ambiente de desenvolvimento que já vem configurado em todas as organizações Salesforce (ou aplicações Salesforce, vamos dizer assim por enquanto).
+
+### Hello World no Developer Console
+
+Para rodar o Hello World, basta:
+
+1. Entrar na sua Org;
+
+2. Clicar em "Developer Console";
+
+   <img src='/assets/readme-1-developer-console.png' width='40%'>
+
+3. Uma nova janela se abrirá. Clique em "New" -> "Apex Class" -> Dê um nome para sua classe. No exemplo abaixo, o nome da classe é "message";
+
+   ```java
+   public class message {
+       
+   }
+   ```
+
+4. Crie um método que vai fazer a ação de mostrar a mensagem. Aqui, o método foi nomeado como helloWorld;
+
+   ```java
+   public class message {
+       public static void helloWorld (){
+           System.debug('Hello, World!');
+       }
+   }
+   ```
+
+5. Salve o arquivo;
+
+6. Hora de rodar o código! Clique em "Debug" -> "Open Execute Anonymous Window". Isso equivale a abrir seu prompt de comando ou terminal.
+
+7. Faça a chamada do método: `message.helloWorld();`! É importante que a caixa de seleção "Open Log" esteja marcada. Clique em "Execute".
+
+   <img src='/assets/readme-2-1-code.png' width='50%' >
+
+8. Será exibida uma janela com muita, muita informação mesmo.
+
+   <img src='/assets/readme-2-2-code-debug-only.png' width='50%' >
+
+9. Mas, para ver apenas seu "Hello, World!", clique na caixinha de seleção "debug only". Este última última imagem não será inserida. Queremos que você veja com os próprios olhos ;)
+
+### Hello World no VSCode
+
+Bem, "rodar" um Hello World no VSCode não é tão simples assim, rs. 
+
+Isso porque o ambiente de desenvolvimento Salesforce, por natureza, é o Developer Console lá na sua organização Salesforce. O Developer Console já está rodando dentro do contexto da sua organização, com todos os objetos relacionados, configurações e muitas outras coisas.
+
+E agora?
+
+Para simular esse mesmo ambiente na sua máquina, você precisa "Criar uma Org offline" no seu computador. Assim, o VSCode terá tudo o que precisa para trabalhar. O ambiente deve ser **preparado**. Chamamos este ambiente preparado de **SFDX**, ou ***Salesforce Developer Experience***.
+
+Vale a pena fazer o projeto neste link https://trailhead.salesforce.com/pt-BR/content/learn/projects/quick-start-salesforce-dx para aprender a configurar seu ambiente, mas aqui temos um passo-a-passo resumido:
 
 - Baixar o VSCode;
 - Instalar a extensão "Salesforce Extension Pack";
 - Baixar o Java Development Kit versão 8 ou 11 no computador (RunTime Enviroiment não é o sufuciente);
-  - configure a variável de ambiente do Java;
+  - Configure a variável de ambiente do Java;
 - Baixar o Salesforce CLI https://developer.salesforce.com/tools/sfdxcli
 - Criar um projeto no VSCode (Ctrl + P -> "SFDX: Create Project")
-- Vincule esse novo projeto a uma org salesforce.
+- Vincule o novo projeto à sua Org Salesforce.
 
-## Criando Registros no Developer Console
+Ambiente preparado!
+
+
+
+## Developer Console
+
+### Criando Registros no Developer Console
 
 Para isso, você precisa conhecer o nome do objeto e o nome dos campos que deseja adicionar.
 
@@ -30,15 +100,15 @@ insert contaNova;
 
 Lembrando que dá para fazer tudo isso normalmente na sua org do Salesforce, ok? ;)
 
+## Elementos de uma aplicação Salesforce
 
-
-## Triggers Apex (Acionadores)
+### Triggers Apex (Acionadores)
 
 Sabe quando nós clicamos para 
 
 As triggers fazem algo no banco de dados baseadas em algum evento como, por exemplo, exibir um pop-up na tela depois que o usuário criar um contato. Mas, se a ferramenta Salesforce oferece recursos para disparar alguma funcionalidade, use a solução padrão (point-and-click).
 
-### Estrutura da Trigger
+#### Estrutura da Trigger
 
 **Vamos criar uma trigger que mostre "Hello, World!" no console antes que uma conta seja salva.** Mas, antes, como construir uma trigger? Olhaí a estrutura:
 
