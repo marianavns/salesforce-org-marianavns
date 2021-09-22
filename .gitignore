@@ -53,3 +53,9 @@ READMESF.md
 !estruturaTrigger.trigger
 !SayHelloWorld.trigger
 
+## Limpeza do projeto
+
+config
+jest.config.js
+sfdx-project.json
+
