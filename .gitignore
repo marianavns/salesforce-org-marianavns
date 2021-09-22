@@ -41,13 +41,12 @@ $RECYCLE.BIN/
 READMESF.md
 
 ## Ainda sem material escrito no projeto
+/scripts/soql
 /force-app/main/default/*
 !/force-app/main/default/triggers
 
-/scripts/*
-
 *.apex
-!hello.apex
+!helloWorld.apex
 
 *.trigger
 !estruturaTrigger.trigger
