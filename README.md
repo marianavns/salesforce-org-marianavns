@@ -5,6 +5,8 @@
 - [Hello World! No Developer Console ou no VSCode?](#Hello-World-No-Developer-Console-ou-no-VSCode)
   - [Hello World no Developer Console](#Hello-World-no-Developer-Console)
   - [Hello World no VSCode](#Hello-World-no-VSCode)
+    - [Configurando o Ambiente](#Configurando-o-Ambiente)
+    - [Finalmente o Hello World no VSCode!](#Finalmente-o-Hello-World-no-VSCode)
 - [Developer Console](#Developer-Console)
   - [Criando Registros no Developer Console](#Criando-Registros-No-Developer-Console)
 - [Elementos de uma Aplicação Salesforce](#Elementos-de-uma-Aplicação-Salesforce)
@@ -68,6 +70,8 @@ E agora?
 
 Para simular esse mesmo ambiente na sua máquina, você precisa "Criar uma Org offline" no seu computador. Assim, o VSCode terá tudo o que precisa para trabalhar. O ambiente deve ser **preparado**. Chamamos este ambiente preparado de **SFDX**, ou ***Salesforce Developer Experience***.
 
+#### Configurando o Ambiente
+
 Vale a pena fazer o projeto neste link https://trailhead.salesforce.com/pt-BR/content/learn/projects/quick-start-salesforce-dx para aprender a configurar seu ambiente, mas aqui temos um passo-a-passo resumido:
 
 - Baixar o VSCode;
@@ -80,7 +84,7 @@ Vale a pena fazer o projeto neste link https://trailhead.salesforce.com/pt-BR/co
 
 Ambiente preparado!
 
-
+#### Finalmente o hello world no VSCode!
 
 ## Developer Console
 
